@@ -1,0 +1,8 @@
+1. 특정 컬럼에 NaN데이터를 가진 행 정보는?
+2. 데이터프레임 타입을 마음대로 변경
+ - object를 numeric으로 : 
+   (1) df.astype({'col_A':'float', 'col_B':'float'}).dtypes
+   (2) pd.to_numeric(df.col_C, errors='coerce')
+   (3) df.apply(pd.to_numeric, errors='coerce')
+ - numeric을 object로:
+   (1) df.astype({'col_A':'str', 'col_B':'str'}).dtypes
